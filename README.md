@@ -14,7 +14,7 @@ mkdir -p /opt/split-gw/
 
 5. На машинах, которым требуется VPN, требуется прописать в качестве шлюза эту машину-роутер, а в качестве dns лучше указать 1.1.1.1.
 
-Скрипт проверен только на Photon OS с Docker 23.x и конфигом AmneziaWG на IPv4.
+Скрипт проверен только на Photon OS 5.0 GA с Docker 23.x и конфигом AmneziaWG на IPv4.
 
 #linux #photonos #docker #hyperv #vpn #router #amnezia #singbox
 
