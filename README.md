@@ -1,7 +1,7 @@
 # PhotonOS-AWG3.1-VPN
 Этот автоматический установщик позволяет развернуть роутер на основе photon os с помощью docker контейнеров.
 
-Требуется преднастроить photon os для начала работы, информация чуть выше.
+Требуется преднастроить photon os для начала работы, информация в самом низу.
 
 1. Создать папку командой:
 mkdir -p /opt/split-gw/
@@ -16,8 +16,6 @@ mkdir -p /opt/split-gw/
 
 Скрипт проверен только на Photon OS 5.0 GA с Docker 23.x и конфигом AmneziaWG на IPv4.
 
-#linux #photonos #docker #hyperv #vpn #router #amnezia #singbox
-
 Дополнительно, если требуется помощь с настройкой photon os, например для Hyper-V:
 1. Скачать тут: https://github.com/vmware/photon/wiki/Downloading-Photon-OS, выбираем "Minimal ISO x86_64", и создаём VM.
 2. Для установки выдели 1гб ram.
@@ -31,4 +29,4 @@ mkdir -p /opt/split-gw/
    7) "systemctl status hv_kvp_daemon hv_vss_daemon hv_fcopy_daemon"
    8) "reboot"
 
-#linux #photonos #docker #hyperv
+#linux #photonos #docker #hyperv #vpn #router #amnezia #singbox
