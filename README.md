@@ -22,13 +22,13 @@ mkdir -p /opt/split-gw/
 1. Скачать тут: https://github.com/vmware/photon/wiki/Downloading-Photon-OS, выбираем "Minimal ISO x86_64", и создаём VM.
 2. Для установки выдели 1гб ram.
 3. После установки photon os minimal дистрибутива на hyper-v, для быстрого старта стоит выполнить ряд команд:
-   a) Отредактируй "vi /etc/ssh/sshd_config" и установи "PermitRootLogin yes"
-   b) tdnf makecache
-   c) systemctl enable docker && systemctl start docker
-   d) tdnf install htop -y
-   e) tdnf install -y hyper-v
-   f) systemctl enable --now hv_kvp_daemon.service hv_vss_daemon.service hv_fcopy_daemon.service
-   g) systemctl status hv_kvp_daemon hv_vss_daemon hv_fcopy_daemon
-   h) reboot
+   1) Отредактируй "vi /etc/ssh/sshd_config" и установи "PermitRootLogin yes"
+   2) "tdnf makecache"
+   3) "systemctl enable docker && systemctl start docker"
+   4) "tdnf install htop -y"
+   5) "tdnf install -y hyper-v"
+   6) "systemctl enable --now hv_kvp_daemon.service hv_vss_daemon.service hv_fcopy_daemon.service"
+   7) "systemctl status hv_kvp_daemon hv_vss_daemon hv_fcopy_daemon"
+   8) "reboot"
 
 #linux #photonos #docker #hyperv
