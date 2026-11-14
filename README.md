@@ -17,3 +17,18 @@ mkdir -p /opt/split-gw/
 Скрипт проверен только на Photon OS с Docker 23.x и конфигом AmneziaWG на IPv4.
 
 #linux #photonos #docker #hyperv #vpn #router #amnezia #singbox
+
+Дополнительно, если требуется помощь с настройкой photon os, например для Hyper-V:
+1. Скачать тут: https://github.com/vmware/photon/wiki/Downloading-Photon-OS, выбираем "Minimal ISO x86_64", и создаём VM.
+2. Для установки выдели 1гб ram.
+3. После установки photon os minimal дистрибутива на hyper-v, для быстрого старта стоит выполнить ряд команд:
+   a) Отредактируй "vi /etc/ssh/sshd_config" и установи "PermitRootLogin yes"
+   b) tdnf makecache
+   c) systemctl enable docker && systemctl start docker
+   d) tdnf install htop -y
+   e) tdnf install -y hyper-v
+   f) systemctl enable --now hv_kvp_daemon.service hv_vss_daemon.service hv_fcopy_daemon.service
+   g) systemctl status hv_kvp_daemon hv_vss_daemon hv_fcopy_daemon
+   h) reboot
+
+#linux #photonos #docker #hyperv
